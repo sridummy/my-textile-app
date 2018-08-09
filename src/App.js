@@ -24,7 +24,7 @@ import ItemDetails from './views/Items/ItemDetails';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <Switch>
           <Route exact path="/login" name="Login Page" component={Login} />
           <Route exact path="/register" name="Register Page" component={Register} />
@@ -33,7 +33,7 @@ class App extends Component {
           <Route path="/getItemDetails" name="Home" component={ItemDetails} />
           <Route path="/" name="Home" component={DefaultLayout} />
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
