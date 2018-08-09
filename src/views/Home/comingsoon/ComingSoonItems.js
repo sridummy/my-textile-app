@@ -4,6 +4,7 @@ import range from 'lodash/range';
 import {CardLink,Card,CardImg,CardBody,CardText,CardTitle,CardSubtitle,Button} from 'reactstrap';
 import {isMobile} from 'react-device-detect';
 import one from './assets/1.jpg';
+import {Link} from 'react-router-dom';
  
 export default class ComingSoonItems extends Component {
 
@@ -27,7 +28,7 @@ export default class ComingSoonItems extends Component {
 
   createChildren = n => range(n).map(i => 
     
-  <CardLink style={{color:'black'}} href="/item/getItemDetails" key={i}>
+  <Link style={{color:'black'}} to="/items/getItemDetails" key={i}>
     <Card style={{border:'transparent',marginBottom:'0px'}}>
     <CardImg top width="100%" src={one}/>
     <CardBody >
@@ -55,7 +56,7 @@ export default class ComingSoonItems extends Component {
       </CardText> 
     </CardBody>
   </Card>
-  </CardLink> 
+  </Link> 
   );
  
   changeActiveItem = (activeItemIndex) => this.setState({ activeItemIndex });

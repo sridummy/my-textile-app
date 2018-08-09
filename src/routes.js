@@ -231,8 +231,8 @@ const routes = [
   // { path: '/widgets', name: 'Widgets', component: Widgets },
   // { path: '/charts', name: 'Charts', component: Charts },
   {path: '/home',name:'HomePage',component: Home},
-  { path: '/items', name: 'Items', component: Items },
-  { path: '/item/getItemDetails', name: 'getItemDetails', component: ItemDetails },
+  { path: '/items',exact:true, name: 'Items', component: Items },
+  { path: '/items/getItemDetails', name: 'getItemDetails', component: ItemDetails },
 ];
 
 export default routes;

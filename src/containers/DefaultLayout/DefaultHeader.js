@@ -6,6 +6,7 @@ import { AppAsideToggler, AppHeaderDropdown, AppNavbarBrand, AppSidebarToggler }
 import logo from '../../assets/img/brand/funky-logo.svg'
 import sygnet from '../../assets/img/brand/sygnet.svg'
 import './searchbar.css';
+import {Link} from 'react-router-dom';
 
 const propTypes = {
   children: PropTypes.node,
@@ -107,7 +108,8 @@ handleChange(event){
               <DropdownItem header tag="div" className="text-center"><strong>Account</strong></DropdownItem>
               <DropdownItem><i className="fa fa-user"></i> Profile</DropdownItem>
               <DropdownItem><i className="fa fa-wrench"></i> Settings</DropdownItem>
-              <DropdownItem><i className="fa fa-lock"></i> Logout</DropdownItem>
+              <DropdownItem><i className="fa fa-wrench"></i><Link to="/login">Log In</Link></DropdownItem>
+              <DropdownItem><i className="fa fa-lock"></i> <Link to="/">Logout</Link></DropdownItem>
             </DropdownMenu>
           </AppHeaderDropdown> }
         </Nav>
